@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <h2>All our Flats</h2>
+  <div class="card-container mt-4">
+    <% @flats.each do |flat| %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <p>
+          <span><i class="fa-solid fa-user-group"></i>
+          <%= flat.number_of_guests %>
+          </span>
+          <i class="fa-solid fa-euro-sign" style="text-indent: 25px;"></i>
+          <%= flat.price_per_night %>
+          </p>
+        </div>
+        <div class="card-body">
+          <%= link_to 'More Info' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
